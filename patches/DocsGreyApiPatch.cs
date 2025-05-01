@@ -7,7 +7,7 @@ public class DocsGreyApiPatch
     [HarmonyPatch(typeof(DocsGreyApi), "Awake")]
     class AwakePatch
     {
-        private static string _type = "General";
+        private static string _type = "Crypto";
         private static List<DocsGreyApi.Method> _methods = new List<DocsGreyApi.Method>()
         {
             new DocsGreyApi.Method(){ name = "aes", args = "string data, string password, bool decrypt"}

@@ -3,10 +3,11 @@ using FoxCrypto;
 using Miniscript;
 
 [HarmonyPatch]
-class PlayerIntrinsicsPatch
+class CryptoIntrinsicsPatch
 {
     private static bool intrinsicsAdded;
-    [HarmonyPatch(typeof(PlayerIntrinsics), "AddInstrinsics")]
+
+    [HarmonyPatch(typeof(CryptoIntrinsics), "AddInstrinsics")]
     static void Postfix()
     {
         if (intrinsicsAdded == true)
